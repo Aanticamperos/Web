@@ -396,20 +396,30 @@ const elementosPorPagina = 10;
 
 
         function filtrarZapatos() {
-            const filtro = document.getElementById('filtro1').value.toLowerCase();
+            const filtro1 = document.getElementById('filtro1').value.toLowerCase();
+            const filtro2 = document.getElementById('filtro2').value.toLowerCase();
+            let zapatosFiltrados = zapatos;
         
-            let zapatosFiltrados = [];
-            if (filtro === "") {
-                zapatosFiltrados = zapatos; // Si no hay filtro, mostrar todos los zapatos
-            } else {
-                zapatosFiltrados = zapatos.filter(zapato =>
-                    zapato.marca.toLowerCase().includes(filtro)
+            if (filtro1 !== "" && filtro2 !== "") {
+                zapatosFiltrados = zapatosFiltrados.filter(zapato =>
+                    zapato.marca.toLowerCase().includes(filtro1) &&
+                    zapato.color.toLowerCase().includes(filtro2)
+                );
+            } else if (filtro1 !== "") {
+                zapatosFiltrados = zapatosFiltrados.filter(zapato =>
+                    zapato.marca.toLowerCase().includes(filtro1)
+                );
+            } else if (filtro2 !== "") {
+                zapatosFiltrados = zapatosFiltrados.filter(zapato =>
+                    zapato.color.toLowerCase().includes(filtro2)
                 );
             }
         
-            // Actualizar la tabla con los zapatos filtrados y respetando la paginación
             actualizarTabla(llenarArrayMostrados(zapatosFiltrados));
         }
+
+            
+        
 
         filtrarZapatos();
         
@@ -430,6 +440,8 @@ const elementosPorPagina = 10;
               <p>Precio: <input type="number" id="precioInput" value="${zapato.precio}"></p>
               <!-- Agrega más campos de acuerdo a las propiedades del zapato -->
               <button onclick="guardarCambios(${zapato.id})">Guardar cambios</button>
+              <button onclick="cerrarmodal()">Cerrar</button>
+              <p id="cerrando"></p>
             `;
           
             // Mostrar el modal cuando se hace clic en "Ver más"
@@ -447,3 +459,38 @@ const elementosPorPagina = 10;
               }
             };
         }
+
+
+
+        function guardarCambios(id) {
+            // Encuentra el zapato en el array por su id
+            const zapato = zapatos.find((item) => item.id === id);
+          
+            // Actualiza las propiedades del zapato con los valores ingresados en los campos del modal
+            zapato.marca = document.getElementById("marcaInput").value;
+            zapato.referencia = document.getElementById("referenciaInput").value;
+            zapato.color = document.getElementById("colorInput").value;
+            zapato.talla = document.getElementById("tallaInput").value;
+            zapato.precio = parseInt(document.getElementById("precioInput").value); // Convierte el precio a número
+            
+            // Puedes agregar más campos y sus actualizaciones aquí si es necesario
+          
+            // Actualiza la tabla después de los cambios
+            filtrarZapatos();
+          
+            // Cierra el modal después de guardar los cambios
+          }
+
+          function cerrarmodal() {
+            return new Promise((resolve, reject) => {
+                var cerrando = document.getElementById("cerrando");
+                cerrando.innerHTML= "CERRANDO...";
+              setTimeout(() => {
+                const modal = document.getElementById("modal");
+                modal.style.display = "none";
+                resolve('Modal cerrado');
+              }, 2000); 
+            });
+          }
+
+        

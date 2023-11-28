@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>PROYECTO</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../css/styles.css" >
-    </head>
-    <body>
-    <form class="container" onsubmit="event.preventDefault();">
-        <h1>LOGIN</h1>
-        <p>Correo</p>
-        <label>
-            <i class="fa-solid fa-user"></i>
-            <input type="email" id="email" required>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PROYECTO</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <form class="formulario">
+        <h1 class="formulario__titulo">LOGIN</h1>
+        <p class="formulario__texto">Correo</p>
+        <label class="formulario__campo">
+            <i class="formulario__icono fa-solid fa-user"></i>
+            <input class="formulario__input" type="email" id="email" required>
         </label>
-        <p>contraseña</p>
-        <label>
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" id="contraseña" required>
+        <p class="formulario__texto">Contraseña</p>
+        <label class="formulario__campo">
+            <i class="formulario__icono fa-solid fa-lock"></i>
+            <input class="formulario__input" type="password" id="contraseña" required>
         </label>
-        <button class="botonIngresar" onclick="validarLogin()">Ingresar </button>
-        <button onclick="limpiarCampos()">Limpiar</button>
-        <p class="mensajeError"id="mensajeError"></p>
-        <p class="cargando" id="cargando"></p>
-    </form>    
-        <script src="../Script/script.js" async defer></script>
-    </body>
-    <!--HOLA-->
+        <button class="formulario__boton formulario__boton--ingresar" onclick="validarLogin()">Ingresar</button>
+        <button class="formulario__boton formulario__boton--limpiar" onclick="limpiarCampos()">Limpiar</button>
+        <p class="formulario__mensaje-error" id="mensajeError"></p>
+        <p class="formulario__cargando" id="cargando"></p>
+    </form>
+    <script src="../Script/script.js" async defer></script>
+</body>
 </html>
