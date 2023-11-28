@@ -9,7 +9,7 @@ const zapatos = [
         precio: 120000,
         calidad: "1.1",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 50
     },
     {   
@@ -22,7 +22,7 @@ const zapatos = [
         precio: 140000,
         calidad: "Triple A",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 10
     },
     {   
@@ -257,6 +257,58 @@ const zapatos = [
         cierre: "Cordones",
         ofertaEspecial: true,
         disponibilidad: 35
+        },
+        {   
+            id:5,
+            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
+            marca: "Nike",
+            referencia: "Air force one",
+            color: "Blanco",
+            talla: "Hombre",
+            precio: 120000,
+            calidad: "1.1",
+            cierre: "Cordones",
+            ofertaEspecial: false,
+            disponibilidad: 0
+        },
+        {   
+            id:5,
+            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
+            marca: "Nike",
+            referencia: "Air force one",
+            color: "Blanco",
+            talla: "Hombre",
+            precio: 120000,
+            calidad: "1.1",
+            cierre: "Cordones",
+            ofertaEspecial: false,
+            disponibilidad: 0
+        },
+        {   
+            id:5,
+            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
+            marca: "Nike",
+            referencia: "Air force one",
+            color: "Blanco",
+            talla: "Hombre",
+            precio: 120000,
+            calidad: "1.1",
+            cierre: "Cordones",
+            ofertaEspecial: false,
+            disponibilidad: 0
+        },
+        {   
+            id:5,
+            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
+            marca: "Nike",
+            referencia: "Air force one",
+            color: "Blanco",
+            talla: "Hombre",
+            precio: 120000,
+            calidad: "1.1",
+            cierre: "Cordones",
+            ofertaEspecial: false,
+            disponibilidad: 0
         }
     
 ];
@@ -266,11 +318,11 @@ const zapatosMostrados = [];
 const elementosPorPagina = 10;
         let paginaActual = 1;
 
-        function llenarArrayMostrados() {
+        function llenarArrayMostrados(array) {
             const empezar = (paginaActual - 1) * elementosPorPagina;
             const finalizar = empezar + elementosPorPagina;
-
-            return zapatos.slice(empezar, finalizar);
+        
+            return array.slice(empezar, finalizar);
         }
 
 
@@ -285,17 +337,16 @@ const elementosPorPagina = 10;
             }
 
             document.getElementById("paginaactual").textContent = paginaActual;
-            actualizarTabla();
+            filtrarZapatos();
         }
 
 
-        function actualizarTabla() {
-            const zapatosAMostrar = llenarArrayMostrados();
+        function actualizarTabla(zapatosFiltrados) {
             const tabla = document.getElementById('tabla');
             tabla.innerHTML = '';
         
-            for (let i = 0; i < zapatosAMostrar.length; i++) {
-                const zapato = zapatosAMostrar[i];
+            for (let i = 0; i < zapatosFiltrados.length; i++) {
+                const zapato = zapatosFiltrados[i];
         
                 const fila = document.createElement('tr');
         
@@ -341,82 +392,33 @@ const elementosPorPagina = 10;
                 tabla.appendChild(fila);
             }
         }
-        actualizarTabla();
+        
+
 
         function filtrarZapatos() {
-            const filtro1 = document.getElementById('filtro1').value.toLowerCase();
-            const filtro2 = document.getElementById('filtro2').value.toLowerCase();
+            const filtro = document.getElementById('filtro1').value.toLowerCase();
         
-            const zapatosFiltrados = zapatos.filter(zapato =>
-                Object.values(zapato).some(value =>
-                    typeof value === 'string' &&
-                    (value.toLowerCase().includes(filtro1) || value.toLowerCase().includes(filtro2))
-                )
-            );
-        
-            mostrarZapatosFiltrados(zapatosFiltrados);
-        }
-        
-        function mostrarZapatosFiltrados(zapatosFiltrados) {
-            const tabla = document.getElementById('tabla');
-            tabla.innerHTML = '';
-        
-            for (let i = 0; i < zapatosFiltrados.length; i++) {
-                const iFila = i + 1;
-                const zapato = zapatosFiltrados[i];
-        
-                const fila = document.createElement('tr');
-        
-                const idZapato = document.createElement('td');
-                idZapato.textContent = "Tenis: " + iFila;
-                fila.appendChild(idZapato);
-        
-                const imgElement = document.createElement("img");
-                imgElement.src = zapato.imagen;
-                imgElement.classList.add("image-size");
-        
-                const imagenCell = document.createElement('td');
-                imagenCell.appendChild(imgElement);
-                fila.appendChild(imagenCell);
-        
-                const marcaCell = document.createElement('td');
-                marcaCell.textContent = zapato.marca;
-                fila.appendChild(marcaCell);
-        
-                const referenciaCell = document.createElement('td');
-                referenciaCell.textContent = zapato.referencia;
-                fila.appendChild(referenciaCell);
-        
-                const colorCell = document.createElement('td');
-                colorCell.textContent = zapato.color;
-                fila.appendChild(colorCell);
-        
-                const tallaCell = document.createElement('td');
-                tallaCell.textContent = zapato.talla;
-                fila.appendChild(tallaCell);
-        
-                const infoAdicionalCell = document.createElement('td');
-                infoAdicionalCell.textContent = zapato.infoAdicional || '';
-                fila.appendChild(infoAdicionalCell);
-        
-                const verMasCell = document.createElement('td');
-                const verMasButton = document.createElement('button');
-                verMasButton.textContent = 'Ver más..';
-                verMasButton.addEventListener('click', () => verMas(zapato));
-                verMasCell.appendChild(verMasButton);
-                fila.appendChild(verMasCell);
-        
-                tabla.appendChild(fila);
+            let zapatosFiltrados = [];
+            if (filtro === "") {
+                zapatosFiltrados = zapatos; // Si no hay filtro, mostrar todos los zapatos
+            } else {
+                zapatosFiltrados = zapatos.filter(zapato =>
+                    zapato.marca.toLowerCase().includes(filtro)
+                );
             }
+        
+            // Actualizar la tabla con los zapatos filtrados y respetando la paginación
+            actualizarTabla(llenarArrayMostrados(zapatosFiltrados));
         }
 
+        filtrarZapatos();
         
 
         function verMas(zapato) {
             // Obtener el modal y los elementos del modal
-            const modal = document.getElementById("myModal");
-            const modalDetails = document.getElementById("modalDetails");
-            const span = document.getElementsByClassName("close")[0];
+            const modal = document.getElementById("modal");
+            const modalDetails = document.getElementById("modalDetalles");
+            const span = document.getElementsByClassName("span")[0];
           
             // Llenar el contenido del modal con la información del zapato y campos editables
             modalDetails.innerHTML = `

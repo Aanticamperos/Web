@@ -15,7 +15,7 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
   
-  .modal-content {
+  .modal-contentido {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -23,7 +23,7 @@
     width: 80%;
   }
   
-  .close {
+  .span {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -36,3 +36,5 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  
