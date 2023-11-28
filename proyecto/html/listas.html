@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/listaStyle.css">
+    </head>
+    <body>
+        <h1>TABLA</h1>
+        <input type="text" id="filtro1" placeholder="Filtrar..">
+        <input type="text" id="filtro2" placeholder="Filtrar...">
+        <button onclick="filtrarZapatos()">Filtrar</button>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Imagen</th>
+                    <th>Marca</th>
+                    <th>Referencia</th>
+                    <th>Color</th>
+                    <th>Talla</th>
+                    <th>INFO ADICIONAL</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tabla">
+
+            </tbody>
+        </table>
+
+      <div id="paginacion">
+          <button onclick="cambiarPagina(-1)">Anterior</button>
+          <span id="paginaactual">1</span>
+          <button onclick="cambiarPagina(1)">Siguiente</button>
+      </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-contentido">
+          <span class="close">&times;</span>
+          <div id="modalDetails"></div>
+        </div>
+      </div>
+        <script src="../Script/TablaScript.js" async defer></script>
+    </body>
+</html>
