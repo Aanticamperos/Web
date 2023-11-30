@@ -15,14 +15,6 @@ body{
     background-repeat: no-repeat;
 }
 
-.container{
-    width: 300px;
-    padding: 50px;
-    background-color: aqua;
-    border: 1px solid black;
-    border-color: black;
-}
-
 .mensajeError{
     color: red;
 }
@@ -94,5 +86,6 @@ body{
   /* Estilos para el mensaje de carga */
   .formulario__cargando {
     font-style: italic;
-    color: #3498db;
+
+    color: black;
   }

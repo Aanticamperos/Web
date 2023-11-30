@@ -28,6 +28,7 @@ function validarLogin() {
         var correoverificacion = false;
         var tieneMayuscula = false;
         var tieneMinuscula = false;
+        event.preventDefault();
 
         if (email === '' || contraseña === '') {
             mensajeError.innerHTML += "\n Por favor, complete todos los campos.";

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <form class="formulario">
+    <form class="formulario" >
         <h1 class="formulario__titulo">LOGIN</h1>
         <p class="formulario__texto">Correo</p>
         <label class="formulario__campo">
@@ -22,8 +22,8 @@
             <i class="formulario__icono fa-solid fa-lock"></i>
             <input class="formulario__input" type="password" id="contraseña" required>
         </label>
-        <button class="formulario__boton formulario__boton--ingresar" onclick="validarLogin()">Ingresar</button>
-        <button class="formulario__boton formulario__boton--limpiar" onclick="limpiarCampos()">Limpiar</button>
+        <button class="formulario__boton--ingresar" onclick="validarLogin()">Ingresar</button>
+        <button class="formulario__boton--limpiar" onclick="limpiarCampos()">Limpiar</button>
         <p class="formulario__mensaje-error" id="mensajeError"></p>
         <p class="formulario__cargando" id="cargando"></p>
     </form>
