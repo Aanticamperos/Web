@@ -1,2 +1,4 @@
 # Web
 Proyecto de FUNDAMENTOS WEB
+
+El proyecto emerge en un entorno tecnológico dinámico, impulsando el desarrollo de software mediante la innovación. Su objetivo es diseñar una aplicación web estática que no solo satisfaga las demandas actuales, sino que también establezca bases para futuras mejoras. Este enfoque interdisciplinario fomenta la creatividad, la resolución de problemas y proporciona una visión integral de los procesos de desarrollo de software, especialmente en un contexto educativo. Se destaca la aplicación de principios fundamentales, con énfasis en calidad, usabilidad y conciencia. El proyecto resulta útil para desarrolladores interesados en explorar técnicas avanzadas en una aplicación, brindando una interfaz interactiva para gestionar elementos con opciones detalladas de visualización y edición de propiedades.
