@@ -35,7 +35,7 @@ const zapatos = [
         precio: 120000,
         calidad: "1.1",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 100
     },
     {   
@@ -48,7 +48,7 @@ const zapatos = [
         precio: 150000,
         calidad: "Triple A",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 50
     },
     {   
@@ -61,7 +61,7 @@ const zapatos = [
         precio: 125000,
         calidad: "Triple A",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 5
     },
     {   
@@ -74,7 +74,7 @@ const zapatos = [
         precio: 120000,
         calidad: "1.1",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 0
     },
     {   
@@ -87,7 +87,7 @@ const zapatos = [
         precio: 120000,
         calidad: "1.1",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 1
     },
     {   
@@ -100,7 +100,7 @@ const zapatos = [
         precio: 120000,
         calidad: "1.1",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 78
     },
     {   
@@ -113,7 +113,7 @@ const zapatos = [
         precio: 120000,
         calidad: "1.1",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 37
     },
     {   
@@ -126,7 +126,7 @@ const zapatos = [
         precio: 120000,
         calidad: "1.1",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 9
     },
     {   
@@ -139,7 +139,7 @@ const zapatos = [
         precio: 120000,
         calidad: "1.1",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 2
     },
     {   
@@ -152,7 +152,7 @@ const zapatos = [
         precio: 120000,
         calidad: "Triple a",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 60
     },
     {   
@@ -165,7 +165,7 @@ const zapatos = [
         precio: 120000,
         calidad: "Triple A",
         cierre: "Cordones",
-        ofertaEspecial: false,
+        vendidos:10,
         disponibilidad: 100
     },
     {   
@@ -177,8 +177,8 @@ const zapatos = [
         talla: "Hombre",
         precio: 120000,
         calidad: "1.1",
+        vendidos:10,
         cierre: "Cordones",
-        ofertaEspecial: false,
         disponibilidad: 50
     },
     {   
@@ -190,8 +190,8 @@ const zapatos = [
         talla: "Hombre",
         precio: 120000,
         calidad: "1.1",
+        vendidos:10,
         cierre: "Cordones",
-        ofertaEspecial: false,
         disponibilidad: 50
     },
     {   id:15,
@@ -202,8 +202,8 @@ const zapatos = [
         talla: "Hombre",
         precio: 130000,
         calidad: "1.0",
+        vendidos:10,
         cierre: "Cordones",
-        ofertaEspecial: true,
         disponibilidad: 30
     },    
     {   
@@ -215,8 +215,8 @@ const zapatos = [
         talla: "Mujer",
         precio: 90000,
         calidad: "1.2",
+        vendidos:10,
         cierre: "Cordones",
-        ofertaEspecial: false,
         disponibilidad: 20
     }, 
     {   
@@ -228,8 +228,8 @@ const zapatos = [
         talla: "Hombre",
         precio: 110000,
         calidad: "1.1",
+        vendidos:10,
         cierre: "Cordones",
-        ofertaEspecial: true,
         disponibilidad: 40
     }, 
     {   
@@ -241,8 +241,8 @@ const zapatos = [
         talla: "Unisex",
         precio: 95000,
         calidad: "1.0",
+        vendidos:10,
         cierre: "Cordones",
-        ofertaEspecial: false,
         disponibilidad: 25
     },
     {   
@@ -254,62 +254,62 @@ const zapatos = [
         talla: "Mujer",
         precio: 100000,
         calidad: "1.2",
+        vendidos:10,
         cierre: "Cordones",
-        ofertaEspecial: true,
         disponibilidad: 35
         },
-        {   
-            id:5,
-            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
-            marca: "Nike",
-            referencia: "Air force one",
-            color: "Blanco",
-            talla: "Hombre",
-            precio: 120000,
-            calidad: "1.1",
-            cierre: "Cordones",
-            ofertaEspecial: false,
-            disponibilidad: 0
-        },
-        {   
-            id:5,
-            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
-            marca: "Nike",
-            referencia: "Air force one",
-            color: "Blanco",
-            talla: "Hombre",
-            precio: 120000,
-            calidad: "1.1",
-            cierre: "Cordones",
-            ofertaEspecial: false,
-            disponibilidad: 0
-        },
-        {   
-            id:5,
-            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
-            marca: "Nike",
-            referencia: "Air force one",
-            color: "Blanco",
-            talla: "Hombre",
-            precio: 120000,
-            calidad: "1.1",
-            cierre: "Cordones",
-            ofertaEspecial: false,
-            disponibilidad: 0
-        },
-        {   
-            id:5,
-            imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
-            marca: "Nike",
-            referencia: "Air force one",
-            color: "Blanco",
-            talla: "Hombre",
-            precio: 120000,
-            calidad: "1.1",
-            cierre: "Cordones",
-            ofertaEspecial: false,
-            disponibilidad: 0
-        }
+    {   
+        id:20,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
+        marca: "Nike",
+        referencia: "Air force one",
+        color: "Blanco",
+        talla: "Hombre",
+        precio: 120000,
+        calidad: "1.1",
+        vendidos:10,
+        cierre: "Cordones",
+        disponibilidad: 0
+    },
+    {   
+        id:21,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
+        marca: "Nike",
+        referencia: "Air force one",
+        color: "Blanco",
+        talla: "Hombre",
+        precio: 120000,
+        calidad: "1.1",
+        vendidos:10,
+        cierre: "Cordones",
+        disponibilidad: 0
+    },
+    {   
+        id:22,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
+        marca: "Nike",
+        referencia: "Air force one",
+        color: "Blanco",
+        talla: "Hombre",
+        precio: 120000,
+        calidad: "1.1",
+        cierre: "Cordones",
+        vendidos:10,
+        disponibilidad: 0
+    },
+    {   
+        id:23,
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tFmTLpN_2lTM3osDMy2ziCEKfVfZZQuOTtArtWxEfA&s",
+        marca: "Nike",
+        referencia: "Air force one",
+        color: "Blanco",
+        talla: "Hombre",
+        precio: 120000,
+        calidad: "1.1",
+        vendidos:10,
+        cierre: "Cordones",
+        disponibilidad: 0
+    }
     
 ];
 
@@ -378,9 +378,9 @@ const elementosPorPagina = 10;
                 tallaCell.textContent = zapato.talla;
                 fila.appendChild(tallaCell);
         
-                const infoAdicionalCell = document.createElement('td');
-                infoAdicionalCell.textContent = zapato.infoAdicional || '';
-                fila.appendChild(infoAdicionalCell);
+                const preciocelda = document.createElement('td');
+                preciocelda.textContent = zapato.precio || '';
+                fila.appendChild(preciocelda);
         
                 const verMasCell = document.createElement('td');
                 const verMasButton = document.createElement('button');
@@ -432,16 +432,18 @@ const elementosPorPagina = 10;
           
             // Llenar el contenido del modal con la información del zapato y campos editables
             modalDetails.innerHTML = `
-              <img src="${zapato.imagen}" alt="Imagen de zapato">
+              <img class="contenido-modal__imagen" src="${zapato.imagen}" alt="Imagen de zapato">
               <p>Marca: <input type="text" id="marcaInput" value="${zapato.marca}"></p>
               <p>Referencia: <input type="text" id="referenciaInput" value="${zapato.referencia}"></p>
               <p>Color: <input type="text" id="colorInput" value="${zapato.color}"></p>
               <p>Talla: <input type="text" id="tallaInput" value="${zapato.talla}"></p>
               <p>Precio: <input type="number" id="precioInput" value="${zapato.precio}"></p>
-              <!-- Agrega más campos de acuerdo a las propiedades del zapato -->
+              <p>Calidad: <input type="text" id="calidadInput" value="${zapato.calidad}"></p>
+              <p>Vendidos: <input type="number" id="vendidosInput" value="${zapato.vendidos}"></p>
+              <p>Cierre: <input type="text" id="cierreInput" value="${zapato.cierre}"></p>
+              <p>Disponibilidad: <input type="number" id="disponibilidadInput" value="${zapato.disponibilidad}"></p>
               <button onclick="guardarCambios(${zapato.id})">Guardar cambios</button>
               <button onclick="cerrarmodal()">Cerrar</button>
-              <p id="cerrando"></p>
             `;
           
             // Mostrar el modal cuando se hace clic en "Ver más"
@@ -472,7 +474,10 @@ const elementosPorPagina = 10;
             zapato.color = document.getElementById("colorInput").value;
             zapato.talla = document.getElementById("tallaInput").value;
             zapato.precio = parseInt(document.getElementById("precioInput").value); // Convierte el precio a número
-            
+            zapato.calidad = document.getElementById("calidadInput").value;
+            zapato.vendidos = document.getElementById("vendidosInput").value;
+            zapato.cierre= document.getElementById("cierreInput").value;
+            zapato.disponibilidad= document.getElementById("disponibilidadInput").value;
             // Puedes agregar más campos y sus actualizaciones aquí si es necesario
           
             // Actualiza la tabla después de los cambios
@@ -483,6 +488,7 @@ const elementosPorPagina = 10;
 
           function cerrarmodal() {
             return new Promise((resolve, reject) => {
+                document.getElementById("modalDetalles").innerHTML="";
                 var cerrando = document.getElementById("cerrando");
                 cerrando.innerHTML= "CERRANDO...";
               setTimeout(() => {
