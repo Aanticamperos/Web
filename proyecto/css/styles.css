@@ -10,9 +10,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("https://images.unsplash.com/photo-1579298245158-33e8f568f7d3?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
-  /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
   background-position: top;
-  /* Centra la imagen */
   background-repeat: no-repeat;
 }
 
@@ -30,39 +28,33 @@ body {
   color: white;
 }
 
-/* Estilos para el título del formulario */
 .formulario__titulo {
   text-align: center;
   font-size: 24px;
   color: white;
 }
 
-/* Estilos para los textos */
 .formulario__texto {
   font-size: 16px;
   margin-bottom: 5px;
 }
 
-/* Estilos para los campos */
 .formulario__campo {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
 
-/* Estilos para los iconos */
 .formulario__icono {
   margin-right: 10px;
 }
 
-/* Estilos para los inputs */
 .formulario__input {
   padding: 8px;
   font-size: 16px;
   width: 100%;
 }
 
-/* Estilos para los botones */
 .formulario__boton {
   padding: 8px;
   width: 8px;
@@ -71,25 +63,22 @@ body {
   cursor: pointer;
 }
 
-/* Estilos para el botón de ingresar */
 .formulario__boton--ingresar {
   background-color: #3498db;
   color: #fff;
 }
 
-/* Estilos para el botón de limpiar */
+
 .formulario__boton--limpiar {
   background-color: #e74c3c;
   color: #fff;
 }
 
-/* Estilos para el mensaje de error */
 .formulario__mensaje-error {
   color: #e74c3c;
   font-weight: bold;
 }
 
-/* Estilos para el mensaje de carga */
 .formulario__cargando {
   font-style: italic;
   color: white;
