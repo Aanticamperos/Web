@@ -34,15 +34,15 @@
     </table>
 
     <div class="paginacion">
-        <button onclick="cambiarPagina(-1)" class="boton">Anterior</button>
+        <button onclick="cambiarPagina(-1)" class="boton" id="botonAnterior">Anterior</button>
         <span id="paginaactual">1</span>
-        <button onclick="cambiarPagina(1)" class="boton">Siguiente</button>
+        <button onclick="cambiarPagina(1)" class="boton" id="botonSiguiente">Siguiente</button>
     </div>
 
     <div id="modal" class="modal">
-        <div class="contenido-modal">
+        <div class="modal__contenido">
             <p id="cerrando"></p>
-            <div id="modalDetalles"></div>
+            <div id="modal__contenido--detalles"></div>
         </div>
     </div>
     <script src="../Script/TablaScript.js" async defer></script>
